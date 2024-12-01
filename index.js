@@ -7,9 +7,9 @@ const { handlePostback } = require('./handles/handlePostback');
 const app = express();
 app.use(express.json());
 const VERIFY_TOKEN = 'ArYAN BOT';
-const PAGE_ACCESS_TOKEN = fs.readFileSync('token.txt', 'utf8').trim();
+const PAGE_ACCESS_TOKEN = fs.readFileSync('ArYAN.txt', 'utf8').trim();
 const COMMANDS_PATH = path.join(__dirname, 'commands');
-const adminUIDs = JSON.parse(fs.readFileSync('admins.json', 'utf8')).admins; // Load admin UIDs
+const adminUIDs = JSON.parse(fs.readFileSync('ArYAN.json', 'utf8')).admins; // Load admin UIDs
 
 // Webhook verification
 app.get('/webhook', (req, res) => {
